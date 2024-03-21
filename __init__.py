@@ -27,6 +27,7 @@ class KEYVIS_OT_SHOWHIDE(bpy.types.Operator):
     bl_idname = 'keyvis.showhide'
     bl_label = 'Show Now, Hide Next'
     bl_description = 'Show now, hide next frame'
+    bl_options = {'UNDO'}
     
     def execute(self, context):
         for i in bpy.context.selected_objects:
@@ -39,6 +40,7 @@ class KEYVIS_OT_HIDESHOW(bpy.types.Operator):
     bl_idname = 'keyvis.hideshow'
     bl_label = 'Hide Before, Show Now'
     bl_description = 'Hide before frame, show now'
+    bl_options = {'UNDO'}
     
     def execute(self, context):
         for i in bpy.context.selected_objects:
